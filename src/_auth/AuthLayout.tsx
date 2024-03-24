@@ -13,7 +13,7 @@ function AuthLayout() {
       <Navigate to="/"/>
       ) : (
         <>
-         <section>
+         <section className='flex flex-1 justify-center items-center flex-col py-y'>
           <Outlet />
         </section>
         </>
