@@ -55,10 +55,12 @@ const AuthProvider = ({children} : {children: React.ReactNode}) => {
     }
 
 
+    // localStorage.getItem('cookiFallback')===null)  navigate('/sign-in'
     useEffect(() => {
-       if(localStorage.getItem('cookiFallback')==='[]' ||
-        localStorage.getItem('cookiFallback')===null)  navigate('/sign-in');
-        checkAuthUser();
+       if(localStorage.getItem('cookiFallback')==='[]')
+        setTimeout(() => {
+            checkAuthUser();
+        }, 1000);
     }, []);
 
     const value = {
